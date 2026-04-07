@@ -452,10 +452,21 @@
     </div>
   </div>
 </footer>
-<div class="float-call" id="fcall">
-  <a href="tel:9042428778">
-    <svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 9.97a19.79 19.79 0 01-3.07-8.67A2 2 0 012.88 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
-    (904) 242-8778
-  </a>
-</div>
+
 <script data-cfasync="false" src="/cdn-cg
+<div id="fcta" style="position:fixed;bottom:28px;right:28px;z-index:8000;opacity:0;pointer-events:none;transition:opacity .3s;display:flex"><a href="tel:9042428778" style="display:flex;align-items:center;gap:8px;padding:12px 22px;background:#0A0A0A;color:#fff;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,.3)"><svg width="14" height="14" viewBox="0 0 24 24" style="fill:#fff;flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 9.97a19.79 19.79 0 01-3.07-8.67A2 2 0 012.88 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>(904) 242-8778</a></div>
+<script>
+(function(){
+  var fc=document.getElementById('fcta');
+  var foot=document.querySelector('footer');
+  function tick(){
+    var y=window.scrollY,show=y>120;
+    if(show&&foot){var r=foot.getBoundingClientRect();if(r.top<window.innerHeight+10)show=false;}
+    if(fc){fc.style.opacity=show?'1':'0';fc.style.pointerEvents=show?'all':'none';}
+  }
+  window.addEventListener('scroll',tick,{passive:true});
+  tick();
+})();
+</script>
+</body>
+</html>
