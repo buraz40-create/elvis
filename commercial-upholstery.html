@@ -27,12 +27,12 @@
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 52px; height: 70px; gap: 16px;
   background: #0A0A0A;
-  border-bottom: 1px solid rgba(255,255,255,.07);
+  border-bottom:none;
 }
 
 /* Homepage override — starts transparent, becomes solid on scroll */
 .nav.transparent { background: transparent; border-color: transparent; position: fixed; left:0; right:0; top:0; transition: background .45s, border-color .45s; }
-.nav.transparent.scrolled { background: rgba(10,10,10,.97) !important; border-color: rgba(255,255,255,.08) !important; backdrop-filter: blur(14px); }
+.nav.transparent.scrolled { background: rgba(10,10,10,.97) !important; border-color:transparent!important; backdrop-filter: blur(14px); }
 
 /* Logo */
 .nav-logo, .nav-logo a {
@@ -92,7 +92,7 @@
   display: block; padding: 11px 20px;
   font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
   color: rgba(255,255,255,.72) !important; text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  border-bottom:none;
   transition: color .2s, background .2s; background: transparent;
 }
 .dropdown li:last-child a, .dropdown a:last-child { border-bottom: none; }
@@ -144,7 +144,7 @@
     
     .page-hero{
   background:#0A0A0A;padding:80px 64px 56px;
-  margin-top:0;border-bottom:1px solid rgba(255,255,255,.08);
+  margin-top:0;border-bottom:none;
 }
 .page-hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(30px,4.5vw,54px);font-weight:300;color:#fff;line-height:1.1;max-width:800px}
 .page-hero h1 em{font-style:italic;color:#B89A6A}
@@ -172,7 +172,7 @@
     .content-body h3{font-family:var(--serif);font-size:22px;font-weight:400;margin:32px 0 12px}
     .content-body p{color:var(--mid);margin-bottom:18px;line-height:1.85}
     .content-body ul{padding-left:0;list-style:none;margin-bottom:18px}
-    .content-body ul li{color:var(--mid);padding:6px 0 6px 20px;position:relative;border-bottom:1px solid rgba(0,0,0,.05)}
+    .content-body ul li{color:var(--mid);padding:6px 0 6px 20px;position:relative;border-bottom:none}
     .content-body ul li::before{content:'—';position:absolute;left:0;color:var(--gold);font-size:12px}
     .sidebar{position:sticky;top:88px}
     .sidebar-card{background:var(--black);color:#fff;padding:40px 36px;margin-bottom:20px}
@@ -189,15 +189,15 @@
     .areas-inner{max-width:1200px;margin:0 auto}
     .areas h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,42px);font-weight:300;margin-bottom:36px}
     .areas h2 em{font-style:italic;color:var(--gold)}
-    .areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ddd;border:1px solid #ddd}
+    .areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:transparent;border:none}
     .area-cell{background:var(--warm-wh);padding:24px 20px}
     .area-cell strong{font-family:var(--serif);font-size:16px;display:block;margin-bottom:6px}
     .area-cell span{font-size:12px;color:var(--mid)}
     .faq-section{padding:80px 64px;max-width:1200px;margin:0 auto}
     .faq-section h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,42px);font-weight:300;margin-bottom:40px}
     .faq-section h2 em{font-style:italic;color:var(--gold)}
-    .faq-item{border-top:1px solid rgba(0,0,0,.1);padding:28px 0}
-    .faq-item:last-child{border-bottom:1px solid rgba(0,0,0,.1)}
+    .faq-item{border-top:none;padding:28px 0}
+    .faq-item:last-child{border-bottom:none}
     .faq-q{font-family:var(--serif);font-size:19px;font-weight:400;margin-bottom:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
     .faq-q::after{content:'+';font-family:var(--sans);font-size:22px;color:var(--gold);flex-shrink:0;line-height:1}
     .faq-item.open .faq-q::after{content:'−'}
@@ -220,7 +220,7 @@
     .footer-col a{font-size:13px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}.footer-col a:hover{color:var(--gold)}
     .footer-contact p{font-size:13px;margin-bottom:10px;color:rgba(255,255,255,.45)}
     .footer-contact a{color:rgba(255,255,255,.45);text-decoration:none}.footer-contact a:hover{color:var(--gold)}
-    .footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:28px;display:flex;justify-content:space-between;font-size:11px}
+    .footer-bottom{border-top:none;padding-top:28px;display:flex;justify-content:space-between;font-size:11px}
     .footer-bottom a{color:rgba(255,255,255,.3);text-decoration:none;margin-left:20px}
     @media(max-width:900px){.content-grid{grid-template-columns:1fr}.sidebar{position:static}.areas-grid{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr 1fr}.page-hero,.content-wrap,.areas,.faq-section,.cta-banner,.footer{padding-left:28px;padding-right:28px}}
   
@@ -253,7 +253,7 @@
 .footer-col a,.fc-contact a{font-size:13px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
 .footer-col a:hover,.fc-contact a:hover{color:#B89A6A}
 .fc-contact p{font-size:13px;margin-bottom:9px;color:rgba(255,255,255,.45)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom{border-top:none;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .footer-bottom p{font-size:11px}
 .footer-bottom-links{display:flex;gap:20px}
 .footer-bottom-links a{font-size:11px;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
@@ -317,7 +317,7 @@
 <div style="background:#F5F3EF;padding:64px 64px 48px;max-width:1200px;margin:0 auto">
   <div style="max-width:720px">
     <p style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#B89A6A;display:flex;align-items:center;gap:8px;margin-bottom:14px"><span style="display:inline-block;width:20px;height:1px;background:#B89A6A"></span>Commercial Upholstery · Jacksonville, FL</p>
-    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(28px,4vw,44px);font-weight:300;line-height:1.1;margin-bottom:20px">Jacksonville's <em>Commercial Upholstery</em> Specialists</h2>
+    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(28px,4vw,44px);font-weight:300;line-height:1.1;margin-bottom:20px">Commercial Upholstery in Jacksonville, FL —<br><em>Built for Business, Built to Last.</em></h2>
     <div style="max-width:680px">
       <div style="font-size:15px;color:#666057;line-height:1.8"><p>When a restaurant's booths start to crack. When a hotel's lobby chairs show wear. When an office's conference seating looks tired. These aren't just aesthetic problems — they're business problems. The appearance of your commercial space directly affects how clients, guests, and customers perceive your brand. And fixing it quickly, durably, and on budget requires a commercial upholstery partner with genuine expertise.</p></div>
       <div style="font-size:15px;color:#666057;line-height:1.8"><p>Elvis Upholstery & Draperies has been that partner for Jacksonville businesses since 1999. Over 27 years, we have completed commercial upholstery projects for restaurants, bars, hotels, country clubs, medical offices, retail environments, and corporate headquarters across the First Coast — delivering results that hold up under real-world commercial conditions.</p></div>
@@ -580,6 +580,143 @@
 </div>
 
 
+
+<!-- ══ COMPLETED WORK / CLIENTS ════════════════════════════════════ -->
+<section class="clients-section">
+  <div class="clients-inner">
+    <div class="clients-head">
+      <p style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#B89A6A;display:flex;align-items:center;gap:8px;margin-bottom:12px"><span style="display:inline-block;width:20px;height:1px;background:#B89A6A"></span>Completed Commercial Work</p>
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(26px,3.5vw,40px);font-weight:300;line-height:1.1;margin-bottom:10px">Trusted by <em style="font-style:italic;color:#B89A6A">Jacksonville's Best</em></h2>
+      <p style="font-size:14px;color:#666057;max-width:560px;line-height:1.7">From casual dining to luxury resorts — businesses across the First Coast trust Elvis Upholstery for commercial-grade results delivered on time and on budget.</p>
+    </div>
+    <div class="clients-grid">
+      <div class="client-card">
+        <div class="client-mono" style="background:#C8102E">V</div>
+        <div class="client-info">
+          <strong class="client-name">V Pizza</strong>
+          <span class="client-type">Restaurant Group</span>
+          <span class="client-loc">Jacksonville Beach · San Marco · Mandarin</span>
+          <span class="client-work">Full restaurant booth reupholstery</span>
+        </div>
+      </div>
+      <div class="client-card">
+        <div class="client-mono" style="background:#2C5F2E">A</div>
+        <div class="client-info">
+          <strong class="client-name">Al's Pizza</strong>
+          <span class="client-type">Italian Restaurant</span>
+          <span class="client-loc">Jacksonville, FL</span>
+          <span class="client-work">Custom booth & banquette seating</span>
+        </div>
+      </div>
+      <div class="client-card">
+        <div class="client-mono" style="background:#8B4513">C</div>
+        <div class="client-info">
+          <strong class="client-name">The Coop</strong>
+          <span class="client-type">Restaurant & Bar</span>
+          <span class="client-loc">Jacksonville, FL</span>
+          <span class="client-work">Custom upholstered seating</span>
+        </div>
+      </div>
+      <div class="client-card">
+        <div class="client-mono" style="background:#2E7D32">I</div>
+        <div class="client-info">
+          <strong class="client-name">Iguana</strong>
+          <span class="client-type">Restaurant & Bar</span>
+          <span class="client-loc">Jacksonville, FL</span>
+          <span class="client-work">Restaurant seating reupholstery</span>
+        </div>
+      </div>
+      <div class="client-card">
+        <div class="client-mono" style="background:#1A1A2E">P</div>
+        <div class="client-info">
+          <strong class="client-name">Prime 14</strong>
+          <span class="client-type">Steakhouse</span>
+          <span class="client-loc">Jacksonville, FL</span>
+          <span class="client-work">Fine dining booth & chair upholstery</span>
+        </div>
+      </div>
+      <div class="client-card">
+        <div class="client-mono" style="background:#1B4F72">O</div>
+        <div class="client-info">
+          <strong class="client-name">One Ocean Hotel</strong>
+          <span class="client-type">Luxury Hotel</span>
+          <span class="client-loc">Atlantic Beach, FL</span>
+          <span class="client-work">Hotel seating & headboard program</span>
+        </div>
+      </div>
+      <div class="client-card">
+        <div class="client-mono" style="background:#7D3C98">M</div>
+        <div class="client-info">
+          <strong class="client-name">Mezzaluna</strong>
+          <span class="client-type">Italian Restaurant</span>
+          <span class="client-loc">Jacksonville, FL</span>
+          <span class="client-work">Full dining room reupholstery</span>
+        </div>
+      </div>
+      <div class="client-card">
+        <div class="client-mono" style="background:#B89A6A">PV</div>
+        <div class="client-info">
+          <strong class="client-name">Ponte Vedra Inn & Club</strong>
+          <span class="client-type">Resort & Country Club</span>
+          <span class="client-loc">Ponte Vedra Beach, FL</span>
+          <span class="client-work">Club seating & hospitality upholstery</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.clients-section{background:#0A0A0A;padding:80px 0}
+.clients-inner{max-width:1200px;margin:0 auto;padding:0 64px}
+.clients-head{margin-bottom:48px}
+.clients-head h2{color:#fff}
+.clients-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.client-card{
+  background:rgba(255,255,255,.04);
+  padding:28px 24px;
+  transition:background .3s;
+}
+.client-card:hover{background:rgba(255,255,255,.08)}
+.client-mono{
+  width:52px;height:52px;
+  border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:22px;font-weight:400;
+  color:#fff;
+  margin-bottom:16px;
+  flex-shrink:0;
+  letter-spacing:-.01em;
+}
+.client-name{
+  display:block;
+  font-family:'Cormorant Garamond',Georgia,serif;
+  font-size:19px;font-weight:400;
+  color:#fff;margin-bottom:4px;
+  line-height:1.2;
+}
+.client-type{
+  display:block;
+  font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:#B89A6A;margin-bottom:8px;
+}
+.client-loc{
+  display:block;
+  font-size:12px;color:rgba(255,255,255,.4);margin-bottom:6px;
+}
+.client-work{
+  display:block;
+  font-size:12px;color:rgba(255,255,255,.3);
+  font-style:italic;line-height:1.5;
+}
+@media(max-width:900px){.clients-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.clients-grid{grid-template-columns:1fr}.clients-inner{padding:0 24px}}
+</style>
+<!-- ═══════════════════════════════════════════════════════════════ -->
 <section class="cta-banner">
   <h2>Ready to Get Started with <em>Commercial Upholstery?</em></h2>
   <p>Visit our Atlantic Beach showroom, call us, or request a free estimate. We serve all of Jacksonville and the First Coast.</p>
